@@ -1,0 +1,116 @@
+.productsCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #f5f5f7;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow-main);
+  position: relative;
+}
+
+.productsInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.productsImage {
+  justify-self: center;
+  align-self: center;
+}
+
+.productsCategoryRates {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+}
+
+.productsRates {
+  display: flex;
+  column-gap: 0.25rem;
+  h4 {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.productsPrice {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-bold);
+  margin-top: auto;
+  &::after {
+    content: " /шт.";
+    color: var(--color-secondary);
+    font-size: var(--font-xs);
+  }
+}
+
+.productsBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.productsButton,
+.productsButtonActive,
+.productsButtonControllers {
+  border-radius: 90px;
+  height: 40px;
+}
+
+.productsButton {
+  background: #00b177;
+  width: 175px;
+}
+
+.productsButtonActive {
+  width: 100px;
+  background: #4056a1;
+  z-index: 1;
+}
+
+.productsButtonControllers {
+  display: flex;
+  column-gap: 0.5rem;
+  background-color: #f5f5f7;
+  align-items: center;
+  width: 120px;
+  position: absolute;
+  left: 55px;
+  justify-content: flex-end;
+  padding: 0 1.25rem;
+  button {
+    background-color: transparent;
+    color: #2e2e33;
+    opacity: 0.3;
+    font-size: var(--font-3xl);
+    font-weight: var(--font-medium);
+  }
+  span {
+    font-weight: var(--font-medium);
+    opacity: 0.8;
+  }
+}
+
+.productsHit {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  background-color: #f00;
+  width: 4rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-35deg);
+  color: #fff;
+  > * {
+    transform: skewX(35deg);
+  }
+}
